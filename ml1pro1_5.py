@@ -23,11 +23,11 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random
 from keras.models import Sequential
 model = Sequential()
 from keras.layers import Dense
-model.add(Dense(units=6, input_dim=11, activation='relu' ))
+model.add(Dense(units=5, input_dim=13, activation='relu' ))
 model.add(Dense(units=1,  activation='sigmoid' ))
 model.compile(optimizer=Adam(learning_rate=0.0000001),loss='binary_crossentropy', metrics=['accuracy'] )
-history=model.fit(X_train,y_train , epochs=50 , verbose=0)
-model.fit(X_train,y_train , epochs=100 , verbose=0)
+history=model.fit(X_train,y_train , epochs=60 , verbose=0)
+model.fit(X_train,y_train , epochs=90 , verbose=0)
 df_loss = pd.DataFrame(model.history.history)
 
 accuracy_variable=history.history['accuracy'][9]
