@@ -25,7 +25,7 @@ model = Sequential()
 from keras.layers import Dense
 model.add(Dense(units=6, input_dim=11, activation='relu' ))
 model.add(Dense(units=1,  activation='sigmoid' ))
-model.compile(optimizer=Adam(learning_rate=0.000001),loss='binary_crossentropy', metrics=['accuracy'] )
+model.compile(optimizer=Adam(learning_rate=0.0000001),loss='binary_crossentropy', metrics=['accuracy'] )
 history=model.fit(X_train,y_train , epochs=50 , verbose=0)
 model.fit(X_train,y_train , epochs=100 , verbose=0)
 df_loss = pd.DataFrame(model.history.history)
