@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-from learning_parameters import *
+from lepara import *
 import pandas as pd
 dataset = pd.read_csv('Churn_Modelling.csv')
 
